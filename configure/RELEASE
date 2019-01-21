@@ -20,6 +20,18 @@
 # CONFIG_SITE file.
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+SUPPORT=/dls_sw/prod/R3.14.12.3/support
+WORK=/dls_sw/work/R3.14.12.3/support
+
+# If you don't want to install into $(TOP) then
+# define INSTALL_LOCATION_APP here
+#INSTALL_LOCATION_APP=<fullpathname>
+
+ASYN=		$(SUPPORT)/asyn/4-21
+STREAMS=	$(SUPPORT)/streamDevice/2-5dls2
+CALC=       $(SUPPORT)/calc/3-1
+QPC=        $(WORK)/QPC
+
 
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
